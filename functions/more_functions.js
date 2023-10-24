@@ -19,7 +19,9 @@ let numA = 20;
 let numB = 500;
 
 function displayMailingLabel(fullName, address, city, state, zip) {
-  const mailingLabel = fullName + "\n" + address + "\n" + city + ", " + state + " " + zip;
+  const mailingLabel = `${fullName}
+${address}
+${city}, ${state} ${zip}`;
   console.log(mailingLabel + "\n");
 }
 
@@ -30,13 +32,16 @@ function addNumbers(num1, num2) {
 
 function displayReceipt(totalDue, amountPaid) {
   let changeDue = amountPaid - totalDue;
+
   console.log(`Total Due: $${totalDue.toFixed(2)}`);
   console.log(`Amount Paid: $${amountPaid.toFixed(2)}`);
+
   if (amountPaid >= totalDue) {
     console.log(`Change Due: $${changeDue.toFixed(2)}`);
   } else {
     console.log(`You still owe: $${Math.abs(changeDue).toFixed(2)}`);
   }
+
   console.log("\n");
 }
 
