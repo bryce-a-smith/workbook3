@@ -19,16 +19,13 @@ let numA = 20;
 let numB = 500;
 
 function displayMailingLabel(fullName, address, city, state, zip) {
-  console.log(fullName);
-  console.log(address);
-  console.log(`${city}, ${state} ${zip}`);
-  console.log("\n");
+  const mailingLabel = fullName + "\n" + address + "\n" + city + ", " + state + " " + zip;
+  console.log(mailingLabel + "\n");
 }
 
 function addNumbers(num1, num2) {
   let sum = num1 + num2;
-  console.log(`${num1} + ${num2} = ${sum}`);
-  console.log("\n");
+  console.log(`${num1} + ${num2} = ${sum}\n`);
 }
 
 function displayReceipt(totalDue, amountPaid) {
