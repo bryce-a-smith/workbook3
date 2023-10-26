@@ -5,7 +5,6 @@ class Person {
         this.grossPay = grossPay;
         this.withholdingCode = withholdingCode;
     }
-
 }
 
 function getSocSecTax(gp) {
