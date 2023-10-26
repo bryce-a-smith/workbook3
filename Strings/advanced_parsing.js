@@ -5,6 +5,7 @@ let counter = 0;
 
 function parseAndDisplayName(n) {
   let firstName, middleName, lastName;
+  n = n.trim();
 
   const firstSpaceIndex = n.indexOf(" ");
 
