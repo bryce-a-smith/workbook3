@@ -17,5 +17,5 @@ const dateParagraph = document.getElementById("dateP");
 
 function onDateConverterBtnClicked() {
 
-    dateParagraph.innerText = new Date(dateForm.value).toDateString();
+    dateParagraph.innerText = new Date(dateForm.value).toISOString();
 }
