@@ -25,32 +25,36 @@
     </main>
     <script>
       "use strict";
-
-      window.onload = init;
-
-      function init() {
-        const findDifferenceBtn = document.getElementById("findDifferenceBtn");
-
-        if (findDifferenceBtn) {
-          findDifferenceBtn.onclick = onFindDifferenceBtnClicked;
-        }
-      }
-
+      //Get html elements into variables.
       const inputDate = document.getElementById("inputDate");
       const resultParagraph = document.getElementById("resultParagraph");
+      const findDifferenceBtn = document.getElementById("findDifferenceBtn");
 
+      //Write functions that will handle (be called) when events on the page occer (event handlers).
       function onFindDifferenceBtnClicked() {
         const todayDate = new Date();
         const travelDate = new Date(inputDate.value);
 
+        //Calculate and define variable milliseconds per day.
         const msec_per_day = 1000 * 60 * 60 * 24;
 
+        //Calculate and define variables for time between dates.
         let elapsedMilliseconds = travelDate.getTime() - todayDate.getTime();
 
         let dayDiff = elapsedMilliseconds / msec_per_day;
         let numDays = Math.round(dayDiff);
 
         resultParagraph.innerText = `Your trip is in ${numDays} days.`;
+      }
+
+      //Call init() function on page load.
+      window.onload = init;
+
+      //Connect or wire-up your event handler functions to events.
+      function init() {
+        if (findDifferenceBtn) {
+          findDifferenceBtn.onclick = onFindDifferenceBtnClicked;
+        }
       }
     </script>
   </body>
