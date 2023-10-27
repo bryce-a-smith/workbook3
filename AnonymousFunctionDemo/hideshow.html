@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hide Show</title>
+  </head>
+  <body>
+    <main>
+      <h3 id="title-heading">Title</h3>
+      <!--name ids what it is then type of thing it is-->
+      <p id="details-paragraph" style="display: none">
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos nam esse quia deleniti eligendi fugiat ducimus
+        quod dolorem soluta pariatur? Consequuntur voluptatum ullam quos necessitatibus nam beatae veritatis at quaerat
+        blanditiis, accusantium amet aut laudantium molestias velit! Repellendus voluptatem ullam obcaecati rerum
+        voluptate itaque error unde dolores alias qui earum, asperiores numquam dolorum labore placeat sint in maiores
+        repudiandae modi sunt? Deleniti velit eaque minima numquam totam labore dolores aliquam sed modi id optio
+        aspernatur, dignissimos earum eius rem reprehenderit delectus! Eaque id, natus atque qui in cum eum! Repellat
+        amet ea autem nostrum error vel placeat delectus assumenda unde!
+      </p>
+    </main>
+    <script>
+      "use strict";
+
+      function init() {
+        //Get html elements into variables
+        const titleHeading = document.getElementById("title-heading");
+        const detailsParagraph = document.getElementById("details-paragraph");
+
+        //Write functions to handle events.
+        function toggleParagraph() {
+          let currentDisplay = detailsParagraph.style.display;
+
+          if (currentDisplay === "none") {
+            detailsParagraph.style.display = "block";
+          } else {
+            detailsParagraph.style.display = "none";
+          }
+        }
+
+        //Wire-up functions to events.
+        titleHeading.onclick = toggleParagraph;
+      }
+
+      window.onload = init;
+    </script>
+  </body>
+</html>
