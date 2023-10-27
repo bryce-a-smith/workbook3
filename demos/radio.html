@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Radio Buttons</title>
+    <style>
+        .radio-group {
+            display: flex;
+            flex-direction: column;
+            width: 10rem;
+        }
+      .pair {
+        display: inline;
+      }
+    </style>
+  </head>
+  <body>
+    <main>
+      <fieldset class="radio-group">
+        <div class="pair">
+          <input type="radio" name="policy-type" id="autoRadio" />
+          <label for="autoRadio">Auto</label>
+        </div>
+
+        <div class="pair">
+          <input type="radio" name="policy-type" id="homeRadio" />
+          <label for="homeRadio">Home</label>
+        </div>
+
+        <div class="pair">
+          <input type="radio" name="policy-type" id="lifeRadio" />
+          <label for="lifeRadio">Life</label>
+        </div>
+
+        <button id="saveButton">Save</button>
+      </fieldset>
+      <script>
+        "use strict";
+
+        function init() {
+            //get html elements
+            const autoRadio = document.getElementById("autoRadio");
+            const homeRadio = document.getElementById("homeRadio");
+            const lifeRadio = document.getElementById("lifeRadio");
+            const saveButton = document.getElementById("saveButton");
+
+            //write function to handle events
+            function save() {
+                
+            }
+            //wire-up functions to events
+        }
+
+        window.onload = init;
+
+      </script>
+    </main>
+  </body>
+</html>
