@@ -29,9 +29,8 @@
 
         //Write functions to handle events.
         function toggleParagraph() {
-          let currentDisplay = detailsParagraph.style.display;
-
-          if (currentDisplay === "none") {
+          //Check current display and switch to "block" or "none"
+          if (detailsParagraph.style.display === "none") {
             detailsParagraph.style.display = "block";
           } else {
             detailsParagraph.style.display = "none";
