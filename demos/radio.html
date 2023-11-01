@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Radio Buttons</title>
     <style>
-        .radio-group {
-            display: flex;
-            flex-direction: column;
-            width: 10rem;
-        }
+      .radio-group {
+        display: flex;
+        flex-direction: column;
+        width: 10rem;
+      }
       .pair {
         display: inline;
       }
@@ -35,25 +35,35 @@
 
         <button id="saveButton">Save</button>
       </fieldset>
+      <p id="radioSelectionParagraph"></p>
       <script>
         "use strict";
 
         function init() {
-            //get html elements
-            const autoRadio = document.getElementById("autoRadio");
-            const homeRadio = document.getElementById("homeRadio");
-            const lifeRadio = document.getElementById("lifeRadio");
-            const saveButton = document.getElementById("saveButton");
+          //get html elements
+          const autoRadio = document.getElementById("autoRadio");
+          const homeRadio = document.getElementById("homeRadio");
+          const lifeRadio = document.getElementById("lifeRadio");
+          const saveButton = document.getElementById("saveButton");
+          const radioSelectionParagraph = document.getElementById("radioSelectionParagraph");
 
-            //write function to handle events
-            function save() {
-                
+          //write function to handle events
+          function save() {
+            if (autoRadio.checked) {
+              radioSelectionParagraph.innerText = "Auto";
+            } else if (homeRadio.checked) {
+              radioSelectionParagraph.innerText = "Home";
+            } else if (lifeRadio.checked) {
+              radioSelectionParagraph.innerText = "Life";
             }
-            //wire-up functions to events
+          }
+          //wire-up functions to events
+          if (saveButton) {
+            saveButton.onclick = save;
+          }
         }
 
         window.onload = init;
-
       </script>
     </main>
   </body>
